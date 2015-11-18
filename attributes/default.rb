@@ -40,6 +40,21 @@ default[:spark] = {
   :limits => {
     :nofile => 100000,
     :nproc => 32768
+  },
+  :conf => {
+    :reducer_max_inflight => nil,
+    :shuffle_compress => nil,
+    :shuffle_consolidate_files => nil,
+    :shuffle_file_buffer => nil,
+    :shuffle_max_retries => nil,
+    :shuffle_num_connections_per_peer => nil,
+    :shuffle_direct_bufs => nil,
+    :shuffle_retry_wait => nil,
+    :shuffle_memory_fraction => nil,
+    :shuffle_sort_bypass_merge_threshold => nil,
+    :shuffle_spill => nil,
+    :shuffle_spill_compress => nil,
+    :akka_framesize => nil
   }
 }
 
