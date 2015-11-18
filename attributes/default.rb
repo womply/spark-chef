@@ -41,7 +41,7 @@ default[:spark] = {
     :nofile => 100000,
     :nproc => 32768
   },
-  :conf = {
+  :conf => {
     :reducer_max_inflight => nil,
     :shuffle_compress => nil,
     :shuffle_consolidate_files => nil,
