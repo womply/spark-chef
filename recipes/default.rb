@@ -122,8 +122,8 @@ template "#{node.spark.home}/conf/metrics.properties" do
   group node.spark.username
   variables({
     :hostname => node['hostname'],
-    :graphite_host => node['graphite_host'],
-    :graphite_port => node['graphite_port']
+    :graphite_host => node['spark']['graphite_host'],
+    :graphite_port => node['spark']['graphite_port']
   })
 end
 
