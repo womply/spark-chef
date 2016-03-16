@@ -1,7 +1,7 @@
 *.sink.graphite.class=org.apache.spark.metrics.sink.GraphiteSink
-*.sink.graphite.prefix=<% @hostname %>
-*.sink.graphite.host=<% @graphite_host %>
-*.sink.graphite.port=<% @graphite_port %>
+*.sink.graphite.prefix=<%= @hostname %>
+*.sink.graphite.host=<%= @graphite_host %>
+*.sink.graphite.port=<%= @graphite_port %>
 *.sink.graphite.period=10
 *.sink.graphite.unit=seconds
 
