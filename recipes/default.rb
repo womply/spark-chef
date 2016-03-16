@@ -115,6 +115,18 @@ template "#{node.spark.home}/conf/spark-defaults.conf" do
   })
 end
 
+template "#{node.spark.home}/conf/metrics.properties" do
+  source "metrics.properties.erb"
+  mode 0755
+  owner node.spark.username
+  group node.spark.username
+  variables({
+    :hostname => node['hostname'],
+    :graphite_host => node['spark']['graphite_host'],
+    :graphite_port => node['spark']['graphite_port']
+  })
+end
+
 template "/etc/security/limits.d/#{node.spark.username}.conf" do
   source "spark-limits.conf.erb"
   mode 0644
