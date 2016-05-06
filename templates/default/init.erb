@@ -24,6 +24,7 @@ case "$1" in
         else
           failure
         fi
+        su -l <%= @username %> -c <%= @start_history_command %> > /dev/null 2>&1
         echo
         exit $retval
         ;;
@@ -37,6 +38,7 @@ case "$1" in
         else
           failure
         fi
+        su -l <%= @username %> -c <%= @stop_history_command %> > /dev/null 2>&1
         echo
         exit $retval
         ;;

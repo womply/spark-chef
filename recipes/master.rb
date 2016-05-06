@@ -49,7 +49,9 @@ if !node.spark.slaves.nil?
       "start_priority" => "70",
       "stop_priority" => "75",
       "start_command" => "#{node.spark.home}/sbin/start-all.sh",
+      "start_history_command" => "#{node.spark.home}/sbin/start-history-server.sh",
       "stop_command" => "#{node.spark.home}/sbin/stop-all.sh",
+      "stop_history_command" => "#{node.spark.home}/sbin/stop-history-server.sh",
       "restart_command" => "#{node.spark.home}/sbin/stop-all.sh ; #{node.spark.home}/sbin/start-all.sh"
     })
   end
